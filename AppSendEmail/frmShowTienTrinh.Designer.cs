@@ -64,6 +64,7 @@
             this.gvShowData.OptionsBehavior.Editable = false;
             this.gvShowData.OptionsBehavior.ReadOnly = true;
             this.gvShowData.OptionsFind.AllowFindPanel = false;
+            this.gvShowData.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
             this.gvShowData.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gvShowData_CustomDrawCell);
             // 
             // gctNguoiNhan

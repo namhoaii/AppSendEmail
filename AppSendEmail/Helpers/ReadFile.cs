@@ -24,7 +24,7 @@ namespace AppSendEmail.Helpers
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
-                    if(ITNHelpers.ITNString.CheckGmail(line))
+                    if(ITNHelpers.ITNString.IsGmail(line))
                         yield return line;
                 }
             }
@@ -44,7 +44,7 @@ namespace AppSendEmail.Helpers
                     if (cellValue != null)
                     {
                         string email = cellValue.ToString();
-                        if (ITNHelpers.ITNString.CheckGmail(email))
+                        if (ITNHelpers.ITNString.IsGmail(email))
                             yield return email;
                     }
                 }

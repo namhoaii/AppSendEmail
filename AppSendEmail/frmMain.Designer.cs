@@ -51,6 +51,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.kEditor1 = new KSharpEditor.KEditor();
             this.panel3 = new System.Windows.Forms.Panel();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -58,7 +59,6 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -66,7 +66,12 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.xemTiếnTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kEditor1 = new KSharpEditor.KEditor();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.bsiPing = new DevExpress.XtraBars.BarStaticItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPing = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelay.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -77,6 +82,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -185,6 +191,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblPing);
+            this.panel1.Controls.Add(this.labelControl8);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.checkEdit1);
             this.panel1.Controls.Add(this.btnChonFileDinhKem);
@@ -199,7 +207,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(389, 503);
+            this.panel1.Size = new System.Drawing.Size(389, 523);
             this.panel1.TabIndex = 18;
             // 
             // groupBox1
@@ -253,9 +261,11 @@
             // 
             // labelControl4
             // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(12, 22);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(48, 16);
+            this.labelControl4.Size = new System.Drawing.Size(51, 16);
             this.labelControl4.TabIndex = 15;
             this.labelControl4.Text = "Tiêu đề:";
             // 
@@ -274,7 +284,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(389, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 503);
+            this.panel2.Size = new System.Drawing.Size(514, 523);
             this.panel2.TabIndex = 19;
             // 
             // panel4
@@ -283,8 +293,18 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 41);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(514, 462);
+            this.panel4.Size = new System.Drawing.Size(514, 482);
             this.panel4.TabIndex = 18;
+            // 
+            // kEditor1
+            // 
+            this.kEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kEditor1.Html = "<p>&nbsp;</p>";
+            this.kEditor1.KEditorEventListener = null;
+            this.kEditor1.Location = new System.Drawing.Point(0, 0);
+            this.kEditor1.Name = "kEditor1";
+            this.kEditor1.Size = new System.Drawing.Size(514, 482);
+            this.kEditor1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -298,8 +318,7 @@
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2,
-            this.bar3});
+            this.bar2});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -309,10 +328,14 @@
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
-            this.barButtonItem4});
+            this.barButtonItem4,
+            this.barStaticItem1,
+            this.bsiPing,
+            this.barEditItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 4;
-            this.barManager1.StatusBar = this.bar3;
+            this.barManager1.MaxItemId = 7;
+            this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             // 
             // bar2
             // 
@@ -361,18 +384,6 @@
             this.barButtonItem4.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -385,9 +396,9 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 527);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 547);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(903, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(903, 0);
             // 
             // barDockControlLeft
             // 
@@ -395,7 +406,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 503);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 523);
             // 
             // barDockControlRight
             // 
@@ -403,7 +414,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(903, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 503);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 523);
             // 
             // notifyIcon1
             // 
@@ -429,15 +440,53 @@
             this.xemTiếnTrìnhToolStripMenuItem.Text = "Xem tiến trình";
             this.xemTiếnTrìnhToolStripMenuItem.Click += new System.EventHandler(this.xemTiếnTrìnhToolStripMenuItem_Click);
             // 
-            // kEditor1
+            // barStaticItem1
             // 
-            this.kEditor1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kEditor1.Html = "<p>&nbsp;</p>";
-            this.kEditor1.KEditorEventListener = null;
-            this.kEditor1.Location = new System.Drawing.Point(0, 0);
-            this.kEditor1.Name = "kEditor1";
-            this.kEditor1.Size = new System.Drawing.Size(514, 462);
-            this.kEditor1.TabIndex = 0;
+            this.barStaticItem1.Caption = "Ping";
+            this.barStaticItem1.Id = 4;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // bsiPing
+            // 
+            this.bsiPing.Caption = "1ms";
+            this.bsiPing.Id = 5;
+            this.bsiPing.Name = "bsiPing";
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "barEditItem1";
+            this.barEditItem1.Edit = this.repositoryItemTextEdit1;
+            this.barEditItem1.Id = 6;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(2, 498);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(24, 16);
+            this.labelControl8.TabIndex = 17;
+            this.labelControl8.Text = "Ping";
+            // 
+            // lblPing
+            // 
+            this.lblPing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPing.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPing.Appearance.ForeColor = System.Drawing.Color.Yellow;
+            this.lblPing.Appearance.Options.UseFont = true;
+            this.lblPing.Appearance.Options.UseForeColor = true;
+            this.lblPing.Location = new System.Drawing.Point(32, 496);
+            this.lblPing.Name = "lblPing";
+            this.lblPing.Size = new System.Drawing.Size(31, 18);
+            this.lblPing.TabIndex = 18;
+            this.lblPing.Text = "1ms";
             // 
             // frmMain
             // 
@@ -454,6 +503,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm gửi email";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDelay.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -467,6 +517,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,7 +546,6 @@
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
@@ -510,5 +560,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private KSharpEditor.KEditor kEditor1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem bsiPing;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.LabelControl lblPing;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
     }
 }

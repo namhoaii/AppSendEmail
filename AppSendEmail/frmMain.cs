@@ -138,13 +138,20 @@ namespace AppSendEmail
             }
         }
 
-        private void btnGui_Click(object sender, EventArgs e)
+        private async void btnGui_Click(object sender, EventArgs e)
         {
             if (Globals.IsFormOpen("frmShowTienTrinh"))
             {
                 MessageBox.Show("Đã có tiến trình đang hoạt động. Vui lòng chờ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 Globals.OpenForm("frmShowTienTrinh");
                 return;
+            }
+            var kq = await ITNHelpers.Network.GetPingTime("smtp.google.com", 1000);
+            if (kq >= 100)
+            {
+                var ctn = MessageBox.Show("Mạng của bạn không ổn định? Bạn có muốn tiếp tục không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (ctn == DialogResult.No)
+                    return;
             }
 
             string emailGui = Properties.Settings.Default.Gmail;
@@ -208,6 +215,71 @@ namespace AppSendEmail
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             RefreshAllControl();
+        }
+
+        async void Ping(string host, int timeout)
+        {
+            while (true)
+            {
+                try
+                {
+                    var kq = await ITNHelpers.Network.GetPingTime(host, timeout);
+
+                    // Kiểm tra xem cửa sổ đã được tạo ra chưa trước khi gọi Invoke hoặc BeginInvoke
+                    if (lblPing.InvokeRequired)
+                    {
+                        lblPing.BeginInvoke(new Action(() =>
+                        {
+                            lblPing.Text = kq.ToString() + "ms";
+                            UpdatePingColor(kq);
+                        }));
+                    }
+
+                    Thread.Sleep(timeout);
+                }
+                catch
+                {
+                    MessageBox.Show("Mất kết nối Internet vui lòng thử lại sau.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    lblPing.BeginInvoke(new Action(() =>
+                    {
+                        lblPing.Text = "Not found";
+                        UpdatePingColor(999);
+                    }));
+                    break;
+                }
+            }
+        }
+
+        private void UpdatePingColor(int kq)
+        {
+            if (kq < 50)
+                lblPing.ForeColor = Color.Green;
+            else if (kq < 100)
+                lblPing.ForeColor = Color.FromArgb(255, 202, 0);
+            else
+                lblPing.ForeColor = Color.Red;
+        }
+
+
+        void ShowPing()
+        {
+            Thread t = new Thread(() =>
+            {
+                Ping("smtp.gmail.com", 1000);
+            });
+            t.IsBackground = true;
+            t.Start();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            if(!ITNHelpers.Network.IsInternetConnected())
+            {
+                MessageBox.Show("Vui lòng kết nối Internet rồi thử lại sau.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                this.Close();
+            }    
+
+            ShowPing();
         }
     }
 }
