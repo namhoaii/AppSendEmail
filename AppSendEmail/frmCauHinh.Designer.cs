@@ -93,7 +93,7 @@
             this.AcceptButton = this.btnLuu;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 251);
+            this.ClientSize = new System.Drawing.Size(446, 236);
             this.Controls.Add(this.chkShow);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtAppPass);

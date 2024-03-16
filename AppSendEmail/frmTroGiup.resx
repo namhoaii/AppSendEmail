@@ -119,7 +119,7 @@
   </resheader>
   <data name="labelControl9.Text" xml:space="preserve">
     <value>+ File Text (&lt;b&gt;&lt;size=11&gt;&lt;color=255, 0, 0&gt;*.txt&lt;/color&gt;&lt;/size&gt;&lt;/b&gt; ) hoặc Excel (&lt;b&gt;&lt;size=11&gt;&lt;color=255, 0, 0&gt;*.xlsx&lt;/color&gt;&lt;/size&gt;&lt;/b&gt; )
-+ File text 1 hàng chỉ chứa 1 gmail &lt;i&gt;(xuống hàng bằng phím &lt;b&gt;Enter&lt;/b&gt;)&lt;/i&gt;
++ File Text 1 hàng chỉ chứa 1 gmail &lt;i&gt;(xuống hàng bằng phím &lt;b&gt;Enter&lt;/b&gt;)&lt;/i&gt;
 + File Excel &lt;b&gt;cột đầu tiên&lt;/b&gt; là gmail</value>
   </data>
 </root>

@@ -42,11 +42,13 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtDelay = new DevExpress.XtraEditors.SpinEdit();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTieuDe = new System.Windows.Forms.TextBox();
+            this.lblPing = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.lblSoGmail = new DevExpress.XtraEditors.LabelControl();
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.txtTieuDe = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,26 +65,23 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.xemTiếnTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.bsiPing = new DevExpress.XtraBars.BarStaticItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.lblPing = new DevExpress.XtraEditors.LabelControl();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xemTiếnTrìnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelay.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTieuDe.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -95,16 +94,16 @@
             // 
             // btnGui
             // 
-            this.btnGui.Location = new System.Drawing.Point(146, 240);
+            this.btnGui.Location = new System.Drawing.Point(146, 263);
             this.btnGui.Name = "btnGui";
             this.btnGui.Size = new System.Drawing.Size(75, 23);
-            this.btnGui.TabIndex = 5;
+            this.btnGui.TabIndex = 4;
             this.btnGui.Text = "Gửi";
             this.btnGui.Click += new System.EventHandler(this.btnGui_Click);
             // 
             // btnChonFileDinhKem
             // 
-            this.btnChonFileDinhKem.Location = new System.Drawing.Point(299, 53);
+            this.btnChonFileDinhKem.Location = new System.Drawing.Point(299, 76);
             this.btnChonFileDinhKem.Name = "btnChonFileDinhKem";
             this.btnChonFileDinhKem.Size = new System.Drawing.Size(74, 23);
             this.btnChonFileDinhKem.TabIndex = 2;
@@ -113,7 +112,7 @@
             // 
             // btnChonFileEmail
             // 
-            this.btnChonFileEmail.Location = new System.Drawing.Point(111, 53);
+            this.btnChonFileEmail.Location = new System.Drawing.Point(111, 76);
             this.btnChonFileEmail.Name = "btnChonFileEmail";
             this.btnChonFileEmail.Size = new System.Drawing.Size(74, 23);
             this.btnChonFileEmail.TabIndex = 1;
@@ -122,7 +121,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 57);
+            this.labelControl3.Location = new System.Drawing.Point(12, 80);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(74, 16);
             this.labelControl3.TabIndex = 5;
@@ -150,7 +149,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(202, 57);
+            this.labelControl2.Location = new System.Drawing.Point(202, 80);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(81, 16);
             this.labelControl2.TabIndex = 9;
@@ -158,7 +157,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 90);
+            this.labelControl1.Location = new System.Drawing.Point(12, 113);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(67, 16);
             this.labelControl1.TabIndex = 10;
@@ -171,7 +170,7 @@
             0,
             0,
             0});
-            this.txtDelay.Location = new System.Drawing.Point(111, 87);
+            this.txtDelay.Location = new System.Drawing.Point(111, 110);
             this.txtDelay.Name = "txtDelay";
             this.txtDelay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -191,13 +190,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtTieuDe);
             this.panel1.Controls.Add(this.lblPing);
             this.panel1.Controls.Add(this.labelControl8);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.checkEdit1);
             this.panel1.Controls.Add(this.btnChonFileDinhKem);
             this.panel1.Controls.Add(this.btnGui);
-            this.panel1.Controls.Add(this.txtTieuDe);
             this.panel1.Controls.Add(this.txtDelay);
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Controls.Add(this.btnChonFileEmail);
@@ -210,13 +209,45 @@
             this.panel1.Size = new System.Drawing.Size(389, 523);
             this.panel1.TabIndex = 18;
             // 
+            // txtTieuDe
+            // 
+            this.txtTieuDe.Location = new System.Drawing.Point(111, 15);
+            this.txtTieuDe.Multiline = true;
+            this.txtTieuDe.Name = "txtTieuDe";
+            this.txtTieuDe.Size = new System.Drawing.Size(261, 41);
+            this.txtTieuDe.TabIndex = 0;
+            // 
+            // lblPing
+            // 
+            this.lblPing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPing.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPing.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(202)))), ((int)(((byte)(0)))));
+            this.lblPing.Appearance.Options.UseFont = true;
+            this.lblPing.Appearance.Options.UseForeColor = true;
+            this.lblPing.Location = new System.Drawing.Point(42, 493);
+            this.lblPing.Name = "lblPing";
+            this.lblPing.Size = new System.Drawing.Size(31, 18);
+            this.lblPing.TabIndex = 18;
+            this.lblPing.Text = "1ms";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Appearance.Options.UseFont = true;
+            this.labelControl8.Location = new System.Drawing.Point(12, 495);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(24, 16);
+            this.labelControl8.TabIndex = 17;
+            this.labelControl8.Text = "Ping";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.labelControl6);
             this.groupBox1.Controls.Add(this.lblSoFileDinhKem);
             this.groupBox1.Controls.Add(this.lblSoGmail);
-            this.groupBox1.Location = new System.Drawing.Point(9, 124);
+            this.groupBox1.Location = new System.Drawing.Point(9, 147);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(380, 99);
             this.groupBox1.TabIndex = 16;
@@ -246,18 +277,11 @@
             // checkEdit1
             // 
             this.checkEdit1.EditValue = true;
-            this.checkEdit1.Location = new System.Drawing.Point(202, 88);
+            this.checkEdit1.Location = new System.Drawing.Point(202, 111);
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "Nội dung có HTML";
             this.checkEdit1.Size = new System.Drawing.Size(170, 20);
             this.checkEdit1.TabIndex = 4;
-            // 
-            // txtTieuDe
-            // 
-            this.txtTieuDe.Location = new System.Drawing.Point(111, 19);
-            this.txtTieuDe.Name = "txtTieuDe";
-            this.txtTieuDe.Size = new System.Drawing.Size(261, 22);
-            this.txtTieuDe.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -271,7 +295,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(6, 22);
+            this.labelControl5.Location = new System.Drawing.Point(6, 19);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(55, 16);
             this.labelControl5.TabIndex = 16;
@@ -345,7 +369,6 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4)});
             this.bar2.OptionsBar.MultiLine = true;
@@ -416,30 +439,6 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 523);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "Tiến trình gửi Email đã bắt đầu...";
-            this.notifyIcon1.BalloonTipTitle = "Thông báo";
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xemTiếnTrìnhToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(150, 26);
-            // 
-            // xemTiếnTrìnhToolStripMenuItem
-            // 
-            this.xemTiếnTrìnhToolStripMenuItem.Name = "xemTiếnTrìnhToolStripMenuItem";
-            this.xemTiếnTrìnhToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.xemTiếnTrìnhToolStripMenuItem.Text = "Xem tiến trình";
-            this.xemTiếnTrìnhToolStripMenuItem.Click += new System.EventHandler(this.xemTiếnTrìnhToolStripMenuItem_Click);
-            // 
             // barStaticItem1
             // 
             this.barStaticItem1.Caption = "Ping";
@@ -464,29 +463,29 @@
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // labelControl8
+            // notifyIcon1
             // 
-            this.labelControl8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(2, 498);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(24, 16);
-            this.labelControl8.TabIndex = 17;
-            this.labelControl8.Text = "Ping";
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "Tiến trình gửi Email đã bắt đầu...";
+            this.notifyIcon1.BalloonTipTitle = "Thông báo";
+            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
-            // lblPing
+            // contextMenuStrip1
             // 
-            this.lblPing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblPing.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPing.Appearance.ForeColor = System.Drawing.Color.Yellow;
-            this.lblPing.Appearance.Options.UseFont = true;
-            this.lblPing.Appearance.Options.UseForeColor = true;
-            this.lblPing.Location = new System.Drawing.Point(32, 496);
-            this.lblPing.Name = "lblPing";
-            this.lblPing.Size = new System.Drawing.Size(31, 18);
-            this.lblPing.TabIndex = 18;
-            this.lblPing.Text = "1ms";
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xemTiếnTrìnhToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(150, 26);
+            // 
+            // xemTiếnTrìnhToolStripMenuItem
+            // 
+            this.xemTiếnTrìnhToolStripMenuItem.Name = "xemTiếnTrìnhToolStripMenuItem";
+            this.xemTiếnTrìnhToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.xemTiếnTrìnhToolStripMenuItem.Text = "Xem tiến trình";
+            this.xemTiếnTrìnhToolStripMenuItem.Click += new System.EventHandler(this.xemTiếnTrìnhToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -510,14 +509,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTieuDe.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,7 +534,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SpinEdit txtDelay;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.TextEdit txtTieuDe;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.CheckEdit checkEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -566,5 +563,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraEditors.LabelControl lblPing;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private System.Windows.Forms.TextBox txtTieuDe;
     }
 }
